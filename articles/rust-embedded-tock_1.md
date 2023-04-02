@@ -2,7 +2,7 @@
 title: "Rustで書かれたRTOS ”Tock embedded OS”を試してみた" # 記事のタイトル
 emoji: "😀" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["zenn"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["組み込み", "rust", "RTOS"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: false # 公開設定（falseにすると下書き）
 ---
 
@@ -36,7 +36,9 @@ https://github.com/tock/tock/tree/master/chips/stm32f4xx/src
 # 3. ユーザランド
 ユーザランド：いわゆるユーザアプリケーションのことです。 
 Tockの特徴の一つとして、 
-<strong><span style="color: red; ">「カーネルとユーザランドが独立している」</span></strong>  
+
+「カーネルとユーザランドが独立している」
+
 が挙げられます。 
 組込み用途の小メモリで動くリアルタイムＯＳではめずらしいなぁと思っています。 
 
@@ -96,10 +98,9 @@ Rustユーザランド：
 tockloader：
 \$ pip3 install -U --user tockloader
 \$ export PATH=\$HOME/Library/Python/3.9/bin/:\$PATH
-\$ grep -q dialout <(groups \$(whoami)) || sudo usermod -a -G dialout \$(whoami) 
- # Note, will need to reboot if prompted for password
-\$ source $HOME/.cargo/env
-\$ export PATH=$HOME/.local/bin:$PATH  #tockloader path
+\$ grep -q dialout <(groups \$(whoami)) || sudo usermod -a -G dialout \$(whoami) # Note, will need to reboot if prompted for password
+\$ source \$HOME/.cargo/env
+\$ export PATH=\$HOME/.local/bin:$PATH  #tockloader path
 
 tockloaderはPythonで書かれています。
 なお、後で気がついたのですが、STM系の実機を使う場合tockloaderは使用しないようです。
@@ -128,7 +129,7 @@ https://github.com/tock/tock/blob/master/boards/nucleo_f446re/README.md
 このとおりに行っていけばよさそうです。
 
 ビルドだけ行う場合：
-\$ cd tock/boards/nucleo_f446re/
+\$ cd tock/boards/nucleo_f446re
 make
 ビルド＆ダウンロード両方：
 \$ cd tock/boards/nucleo_f446re
