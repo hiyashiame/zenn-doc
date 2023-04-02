@@ -23,7 +23,7 @@ https://www.tockos.org/
 
 # 2. 動かして見るハードウェア
 秋月電子の通販サイトからSTMのNucleo F446REが購入できます。（現時点では） 
-![](/images/article1-tock1/tock1_1.jpg)
+![](https://github.com/hiyashiame/zenn-doc/blob/main/images/article1-tock1/tock1_1.jpg)
 この実機はTockの対象ハードウェアに入っているため、これで味見をしてみることにします。 
 
 味見するにあたり、ハードウェアの機能としてはどのくらい対応されているのかを調べました。 
@@ -171,7 +171,7 @@ program: $(TOCK_ROOT_DIRECTORY)target/$(TARGET)/debug/$(PLATFORM).elf
 実機上の青いボタンを押すとLEDが光ります。
 もう一度押すと、LED消えます。
 これを繰り返します。
-![](/images/article1-tock1/tock1_2.jpg)
+![](https://github.com/hiyashiame/zenn-doc/blob/main/images/article1-tock1/tock1_2.jpg)
 
 
 ## 5.8 参考：ログ出力
