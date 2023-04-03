@@ -1,4 +1,4 @@
 # zenn-doc
 Docs for zenn.dev
 
-https://zenn.dev/zenn
+https://zenn.dev/hiyashiame
