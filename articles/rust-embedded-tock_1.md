@@ -15,7 +15,7 @@ https://www.tockos.org/blog/2020/hello-opensk/
 実際どれくらい自分の近くに来ているのかと興味があり、サポートされているハードウェアを調べてみたところ、STMのNucleoシリーズやRISC-VのHiFive1ボード等、なかなか身近なところまで来ていました。 
 
 最近組込み分野でもRustを検討し始める声が聞こえてきて、乗り遅れないようにしなきゃと焦りがありました。 
-それでとりあえずはFreeRTOSの上でRustを動かしてみようかなと思ったのです、先に”Tock embedded OS”を味見してみたくなりました。 
+それでとりあえずはFreeRTOSの上でRustを動かしてみようかなと思ったのですが、先に”Tock embedded OS”を味見してみたくなりました。 
 
 https://www.tockos.org/
 
