@@ -1,4 +1,5 @@
-title: "Rustで書かれたRTOS ”Tock embedded OS”を試してみた２" # 記事のタイトル
+---
+title: "”Tock embedded OS”の中をちょっと覗いてみた" # 記事のタイトル
 emoji: "😀" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["組み込み", "rust", "RTOS"] # タグ。["markdown", "rust", "aws"]のように指定する
