@@ -11,8 +11,11 @@ published: false # 公開設定（falseにすると下書き）
 Tock embedded OS を試してみています。 
 前回、STMのNucleo F446REボードを使って、LEDチカまで試してみることができましたが、スタートアップのところや割り込み系についてどのように動いているのか謎です。
 
-公式GitHubにあるドキュメントを参照して自分なりに理解した結果を書こうと思います。
+公式GitHubにあるドキュメントを参照したり、
 https://github.com/tock/tock/tree/master/doc
+公式GitHubのソースコードを見たりして、
+https://github.com/tock/tock
+自分なりに理解した結果を書こうと思います。
 
 なにかの参考になれば幸いです。
 
@@ -21,8 +24,8 @@ https://github.com/tock/tock/tree/master/doc
 
 
 # 2. 全体構成
-Tockは以下のような構成になっています。
-公式GitHubの図を引用します。
+Tockの構成について、公式GitHubの資料をへのリンクは以下です。
+https://github.com/tock/tock/blob/master/doc/Overview.md
 
 OS部：
 Kernel部があって、そこにI/Oドライバも含まれます。内蔵I/Oアクセス部のみunsafe部。これは仕方ないですね。全体としてはtrustedです。
@@ -56,6 +59,7 @@ tock/boards/nucleo_f446re/src/main.rs
 　PeripheralとCapsuleの初期化、Applicaton Startupを行い、最後にKernelのメイン処理となるスケジューラを起動する。
 
 ちなみに、ドライバコールの際のDRIVER_NUMはここで定義している様子。（違う？）
+```
 /// Mapping of integer syscalls to objects that implement syscalls.
 impl SyscallDriverLookup for NucleoF446RE {
     fn with_driver<F, R>(&self, driver_num: usize, f: F) -> R
@@ -75,7 +79,7 @@ impl SyscallDriverLookup for NucleoF446RE {
         }
     }
 }
-
+```
 # 4. システムコール
 次は、ユーザランドからカーネルへのシステムコールのやり取りの方法について読み解いていきます。
 
@@ -189,7 +193,7 @@ tock/capsules/src/led.rs
 libtock-c/examples/buttons/main.cで、
 err = button_subscribe(button_callback, NULL);
 と設定し、ボタン押下によって
-```mermaid
+```
 static void button_callback(int                            btn_num,
                             int                            val,
                             __attribute__ ((unused)) int   arg2,
@@ -279,7 +283,7 @@ kernel::syscall::ContextSwitchReason::Interrupted
 
 
 # 5 最後に
-カーネルスケジューラの辺り、詳しくつっこんでいくうちに気力が続かなくなりました。
+カーネルスケジューラの辺り、詳しくつっこんでいくうちに気力が続かなくなりましたが、概ね割り込み系でどう動いているかはわかったような気がします。
 また新たな力が湧いてきたら、再チャレンジするかもしれません。
 今は、どっちかというと、このOSを使ってみたい方に興味が動いてしまいました。
 （あぁなんて飽きっぽいのだろうか。。。）
