@@ -3,10 +3,10 @@ title: "”Tock embedded OS”の中をちょっと覗いてみた" # 記事の�
 emoji: "😀" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["組み込み", "rust", "RTOS"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
-# 1. 前回までの試み
+# 1. 今やっていること
 
 Tock embedded OS を試してみています。 
 前回、STMのNucleo F446REボードを使って、LEDチカまで試してみることができましたが、スタートアップのところや割り込み系についてどのように動いているのか謎です。
