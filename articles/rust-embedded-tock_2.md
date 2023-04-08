@@ -24,8 +24,9 @@ https://github.com/tock/tock
 
 
 # 2. 全体構成
-Tockの構成について、公式GitHubに図がありますので、引用します。
-![](https://github.com/tock/tock/blob/master/doc/tock-stack.png)
+Tockの構成について、公式GitHubを見たほうが早いのですが、簡単に言うとこんな感じです。
+公式GitHubの概要説明：
+https://github.com/tock/tock/blob/master/doc/Overview.md
 
 OS部：
 Kernel部があって、そこにI/Oドライバも含まれます。内蔵I/Oアクセス部のみunsafe部。これは仕方ないですね。全体としてはtrustedです。
