@@ -1,9 +1,9 @@
 ---
-title: "[Rust]”Tock embedded OS”のKernelをVSCodeでデバッグする" # 記事のタイトル
+title: "”Tock embedded OS”のKernelをVSCodeでデバッグする" # 記事のタイトル
 emoji: "🌱" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["組み込み", "rust", "RTOS"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
 # 1. 試していること
@@ -11,6 +11,10 @@ published: false # 公開設定（falseにすると下書き）
 Tock embedded OS を試してみています。
 今回は、VSCodeを用いてKernelのデバッグをしてみます。
 ホストPCはUbuntu 22です。Windowsではありません。
+
+記事一覧：
+https://zenn.dev/hiyashiame/articles/rust-embedded-tock_1
+https://zenn.dev/hiyashiame/articles/rust-embedded-tock_2
 
 
 # 2. VSCodeのインストール
