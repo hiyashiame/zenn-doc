@@ -29,8 +29,7 @@ VSCodeのFileメニューから、Open Folder...[Ctl-k Ctl-O] を選択すると
 tockのルートフォルダを選択する。
 そうすると、VSCodからファイルが見れるようになる。
 
-tock_vscode1.png
-
+![](https://storage.googleapis.com/zenn-user-upload/0138d3c4c91c-20230423.png)
 
 # 5. launch.jsonを編集する。
 tockのルートフォルダ直下に、隠しフォルダとして .vscodeがある。
@@ -79,7 +78,7 @@ launch.json同様、tockのルートフォルダ直下の隠しフォルダ.vsco
 実機のリセットを押したまま、Debug Startを押し、すぐに実機のリセットボタンを離す。
 すると、バイナリのダウンロードが行われ、main関数先頭でブレークする。
 
-＜tock_vscode2.png＞
+![](https://storage.googleapis.com/zenn-user-upload/4f7a10222b41-20230423.png)
 
 
 、、、てな感じでカーネルはVSCode＆ST-Linkでデバッグができる。
