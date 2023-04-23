@@ -1,5 +1,5 @@
 ---
-title: "Rustで書かれたRTOS ”Tock embedded OS”を試してみた３" # 記事のタイトル
+title: "[Rust]”Tock embedded OS”のKernelをVSCodeでデバッグする" # 記事のタイトル
 emoji: "🌱" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["組み込み", "rust", "RTOS"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -41,7 +41,7 @@ home@home-CFSX4-1L:~/tock/.vscode$ ls
 launch.json  settings.json
 
 編集といっても、以下をくっつけるだけ。
-----
+
        {
             "name": "nucleo_f446re Tock os Debug",
             "type": "cortex-debug",
@@ -54,7 +54,7 @@ launch.json  settings.json
                 "${workspaceRoot}/boards/nucleo_f446re/openocd.cfg",
             ]
         }
-----
+        
 ここで、
 nucleo_f446re-app.elf
 というのは、Kernelとアプリがくっついたバイナリのこと。
